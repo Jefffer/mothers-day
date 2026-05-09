@@ -79,7 +79,7 @@ const questions = [
   {
     question: '7. Que corregimiento de Medellin es conocido por sus flores y fincas?',
     image:
-      'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/15/6f/ec/33.jpg',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5d/d6/a7/caption.jpg?w=500&h=400&s=1',
     imageAlt: 'Paisaje rural con flores y montanas',
     options: ['San Cristobal', 'Palmitas', 'Altavista', 'Santa Elena'],
     correctIndex: 3,
@@ -257,20 +257,16 @@ function App() {
                   transition={{ duration: 0.35 }}
                   className="overflow-hidden rounded-[2rem] border border-[#f5d0bf] bg-white/85 shadow-[0_20px_60px_-35px_rgba(138,73,45,0.45)]"
                 >
-                  <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-                    <div className="relative min-h-[240px] lg:min-h-full">
+                  <div className="grid lg:grid-cols-[0.92fr_1.08fr]">
+                    <div className="relative h-[270px] overflow-hidden sm:h-[320px] lg:h-[560px]">
                       <img
                         src={question.image}
                         alt={question.imageAlt}
-                        className="h-full w-full object-cover"
+                        className="absolute inset-0 h-full w-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#45261d]/60 via-[#45261d]/10 to-transparent" />
-                      <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.24em] text-[#8b4a31] shadow-sm">
-                        <MapPinned size={14} />
-                        Momento {currentQuestion + 1}
-                      </div>
-                      <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/88 p-4 backdrop-blur-md">
-                        <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#9d614b]">
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#45261d]/55 via-[#45261d]/10 to-transparent" />
+                      <div className="absolute bottom-4 left-4 right-4 rounded-[1.35rem] border border-white/30 bg-[#fffaf5]/92 p-4 shadow-[0_12px_30px_-20px_rgba(0,0,0,0.45)] backdrop-blur-md">
+                        <p className="text-xs font-black uppercase tracking-[0.24em] text-[#9d614b]">
                           Pregunta {currentQuestion + 1} de {questions.length}
                         </p>
                         <div className="mt-3 h-2 overflow-hidden rounded-full bg-[#ffe1d0]">
@@ -284,10 +280,17 @@ function App() {
                       </div>
                     </div>
 
-                    <div className="space-y-5 p-5 sm:p-7">
-                      <h2 className="font-display text-3xl leading-tight text-[#4f2f21] sm:text-[2.15rem]">
-                        {question.question}
-                      </h2>
+                    <div className="space-y-5 p-5 sm:p-7 lg:flex lg:flex-col lg:justify-center">
+                      <div className="space-y-3">
+                        <p className="inline-flex items-center gap-2 rounded-full bg-[#fff4ed] px-4 py-2 text-xs font-extrabold uppercase tracking-[0.22em] text-[#ad5939]">
+                          <CircleHelp size={14} />
+                          Cuestionario de Elizabeth
+                        </p>
+
+                        <h2 className="font-display text-3xl leading-tight text-[#4f2f21] sm:text-[2.15rem]">
+                          {question.question}
+                        </h2>
+                      </div>
 
                       <div className="grid gap-3 sm:grid-cols-2">
                         {question.options.map((option, optionIndex) => {
