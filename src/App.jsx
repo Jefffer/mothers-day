@@ -402,19 +402,42 @@ function App() {
                 {scoreMessage}
               </p>
 
-              <div className="mx-auto mt-3 max-w-2xl rounded-[2rem] border border-[#f8d6b7] bg-gradient-to-br from-[#fff9f0] to-[#ffe9d8] p-8 shadow-[0_20px_50px_-35px_rgba(170,89,45,0.5)]">
-                <p className="mb-3 inline-flex items-center gap-2 text-xl font-black text-[#ae582f]">
-                  <Gift size={24} />
-                  Sorpresa para Elizabeth
-                </p>
-                <p className="text-3xl font-black text-[#6c3f2b] sm:text-4xl">
-                  Te espera un viaje hecho con mucho amor
-                </p>
-                <p className="mt-4 text-base leading-relaxed text-[#7a5847] sm:text-lg">
-                  Porque mereces celebrar bonito, descansar y sentirte muy querida.
-                  Este detalle es un abrazo largo, una sonrisa tranquila y una aventura
-                  pensada solo para ti.
-                </p>
+              <div className="mx-auto mt-3 grid max-w-4xl gap-0 overflow-hidden rounded-[2rem] border border-[#f8d6b7] bg-gradient-to-br from-[#fff9f0] to-[#ffe9d8] shadow-[0_20px_50px_-35px_rgba(170,89,45,0.5)] lg:grid-cols-[0.96fr_1.04fr] lg:text-left">
+                <div className="relative h-full min-h-[260px] sm:min-h-[320px] lg:min-h-[420px]">
+                  <img
+                    src="/3.png"
+                    alt="Elizabeth celebrando su premio"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#412218]/55 via-[#412218]/10 to-transparent" />
+                  <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/92 px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.22em] text-[#8b4a31] shadow-sm">
+                    <Gift size={14} />
+                    Premio final
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4 rounded-[1.35rem] border border-white/25 bg-white/88 p-4 backdrop-blur-md">
+                    <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#9d614b]">
+                      Para Elizabeth, con amor
+                    </p>
+                    <p className="mt-2 text-lg font-black text-[#5b3325]">
+                      Un recuerdo bonito para cerrar este dia
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
+                  <p className="mb-3 inline-flex items-center gap-2 text-xl font-black text-[#ae582f]">
+                    <Gift size={24} />
+                    Sorpresa para Elizabeth
+                  </p>
+                  <p className="text-3xl font-black text-[#6c3f2b] sm:text-4xl">
+                    Te espera un viaje hecho con mucho amor
+                  </p>
+                  <p className="mt-4 text-base leading-relaxed text-[#7a5847] sm:text-lg">
+                    Porque mereces celebrar bonito, descansar y sentirte muy querida.
+                    Este detalle es un abrazo largo, una sonrisa tranquila y una aventura
+                    pensada solo para ti.
+                  </p>
+                </div>
               </div>
 
               <div className="pt-2">
