@@ -10,60 +10,39 @@ import {
   XCircle,
 } from 'lucide-react'
 
-const travelSpots = [
-  {
-    name: 'Guatape',
-    description: 'Calles coloridas, embalse y vistas inolvidables.',
-    image:
-      'https://images.unsplash.com/photo-1576020799627-aeac74d58064?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    name: 'Comuna 13',
-    description: 'Arte urbano, musica, historia y energia local.',
-    image:
-      'https://images.unsplash.com/photo-1708633623355-89f8f2ec6a92?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    name: 'Piedra del Penol',
-    description: 'Una panoramica espectacular para celebrar en familia.',
-    image:
-      'https://images.unsplash.com/photo-1662908904604-1c5ab63f8337?auto=format&fit=crop&w=900&q=80',
-  },
-]
-
 const questions = [
   {
     question: '1. Como se llama el sistema de telefericos urbano de Medellin?',
-    options: ['Metroplus', 'Metrocable', 'Tranvia Verde', 'Aero Metro'],
-    correctIndex: 1,
+    options: ['Metrocable', 'Metroplus', 'Tranvia Verde', 'Aero Metro'],
+    correctIndex: 0,
     explanation:
       'El Metrocable conecta varios barrios de ladera con el sistema integrado de transporte.',
   },
   {
     question: '2. En que plaza se encuentran las famosas esculturas de Fernando Botero?',
-    options: ['Parque Berrio', 'Plaza Botero', 'Parque de los Deseos', 'Plaza Mayor'],
-    correctIndex: 1,
+    options: ['Parque Berrio', 'Parque de los Deseos', 'Plaza Botero', 'Plaza Mayor'],
+    correctIndex: 2,
     explanation:
       'La Plaza Botero exhibe esculturas monumentales del artista antioqueno y es un punto turistico clave.',
   },
   {
     question: '3. La Piedra del Penol se encuentra cerca de que municipio?',
-    options: ['Jardin', 'Guatape', 'Sabaneta', 'Santa Elena'],
-    correctIndex: 1,
+    options: ['Jardin', 'Santa Elena', 'Guatape', 'Sabaneta'],
+    correctIndex: 2,
     explanation:
       'La Piedra del Penol esta entre El Penol y Guatape, una excursion clasica desde Medellin.',
   },
   {
     question: '4. En que lugar esta el tradicional Pueblito Paisa?',
-    options: ['Cerro Nutibara', 'Parque Arvi', 'Cerro El Volador', 'Envigado'],
-    correctIndex: 0,
+    options: ['Parque Arvi', 'Cerro El Volador', 'Envigado', 'Cerro Nutibara'],
+    correctIndex: 3,
     explanation:
       'El Pueblito Paisa se ubica en el Cerro Nutibara y representa una plaza tipica antioquena.',
   },
   {
     question: '5. Cual es la feria mas emblematicamente floral de Medellin?',
-    options: ['Feria de la Cosecha', 'Feria de las Flores', 'Fiesta del Sol', 'Carnaval Paisa'],
-    correctIndex: 1,
+    options: ['Feria de la Cosecha', 'Fiesta del Sol', 'Feria de las Flores', 'Carnaval Paisa'],
+    correctIndex: 2,
     explanation:
       'La Feria de las Flores es una celebracion iconica con silleteros, musica y desfiles.',
   },
@@ -81,8 +60,8 @@ const questions = [
   },
   {
     question: '7. Que corregimiento de Medellin es conocido por sus flores y fincas?',
-    options: ['San Cristobal', 'Santa Elena', 'Palmitas', 'Altavista'],
-    correctIndex: 1,
+    options: ['San Cristobal', 'Palmitas', 'Altavista', 'Santa Elena'],
+    correctIndex: 3,
     explanation:
       'Santa Elena destaca por su tradicion silletera y paisajes naturales muy visitados.',
   },
@@ -95,8 +74,8 @@ const questions = [
   },
   {
     question: '9. El Parque Arvi puede visitarse facilmente usando:',
-    options: ['Un ferry', 'El Metrocable', 'Un tranvia maritimo', 'Un monorriel'],
-    correctIndex: 1,
+    options: ['Un ferry', 'Un monorriel', 'El Metrocable', 'Un tranvia maritimo'],
+    correctIndex: 2,
     explanation:
       'Una de las formas mas especiales de llegar al Parque Arvi es en Metrocable.',
   },
@@ -200,8 +179,9 @@ function App() {
                   </h1>
 
                   <p className="mt-4 max-w-xl text-lg leading-relaxed text-[#6c4b3d]">
-                    Este detalle fue hecho con amor por tus hijos. Queremos
-                    regalarte sonrisas, recuerdos y una aventura inolvidable.
+                    Este detalle fue hecho con amor por tus hijos. Debes
+                    completar un cuestionario para ganarte un premio sorpresa.
+                    El premio sera el mismo; solo cambiara el mensaje final.
                   </p>
 
                   <button
@@ -222,41 +202,14 @@ function App() {
                 >
                   <div className="absolute -left-4 -top-4 h-24 w-24 rounded-full border-2 border-dashed border-[#f4af8f]" />
                   <img
-                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80"
-                    alt="Retrato de una madre sonriente"
+                    src="/1.jpg"
+                    alt="Elizabeth"
                     className="h-[410px] w-full rounded-[1.8rem] object-cover shadow-lg"
                   />
                   <p className="absolute -bottom-4 right-4 rounded-2xl bg-white/90 px-4 py-2 text-sm font-bold text-[#6d4a3a] shadow">
                     Tu foto va aqui
                   </p>
                 </motion.div>
-              </div>
-
-              <div className="grid gap-4 md:grid-cols-3">
-                {travelSpots.map((spot, index) => (
-                  <motion.article
-                    key={spot.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ delay: 0.1 * index, duration: 0.4 }}
-                    className="overflow-hidden rounded-3xl border border-[#f7d4c2] bg-[#fff9f5]"
-                  >
-                    <img
-                      src={spot.image}
-                      alt={spot.name}
-                      className="h-40 w-full object-cover"
-                    />
-                    <div className="p-4">
-                      <h2 className="font-display text-2xl text-[#5d3625]">
-                        {spot.name}
-                      </h2>
-                      <p className="mt-2 text-sm text-[#7a5b4d]">
-                        {spot.description}
-                      </p>
-                    </div>
-                  </motion.article>
-                ))}
               </div>
             </motion.div>
           )}
@@ -403,7 +356,7 @@ function App() {
               </h2>
 
               <p className="mx-auto max-w-2xl text-lg leading-relaxed text-[#6f4f41]">
-                {scoreMessage}
+                {scoreMessage} El premio es el mismo para ambos resultados.
               </p>
 
               <div className="mx-auto mt-3 max-w-2xl rounded-[2rem] border border-[#f8d6b7] bg-gradient-to-br from-[#fff9f0] to-[#ffe9d8] p-8 shadow-[0_20px_50px_-35px_rgba(170,89,45,0.5)]">
