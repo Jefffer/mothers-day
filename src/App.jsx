@@ -14,7 +14,7 @@ const questions = [
   {
     question: '1. Como se llama el sistema de telefericos urbano de Medellin?',
     image:
-      'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80',
+      'https://medellin-tours.com/wp-content/uploads/2023/07/image3.jpg',
     imageAlt: 'Cabinas del teleferico sobre Medellin',
     options: ['Metrocable', 'Metroplus', 'Tranvia Verde', 'Aero Metro'],
     correctIndex: 0,
@@ -24,7 +24,7 @@ const questions = [
   {
     question: '2. En que plaza se encuentran las famosas esculturas de Fernando Botero?',
     image:
-      'https://images.unsplash.com/photo-1624838821716-9a60e8d25754?auto=format&fit=crop&w=1200&q=80',
+      'https://blog.wynwood-house.com/hubfs/plaza-botero-como-llegar.jpg',
     imageAlt: 'Esculturas y plaza en el centro de Medellin',
     options: ['Parque Berrio', 'Parque de los Deseos', 'Plaza Botero', 'Plaza Mayor'],
     correctIndex: 2,
@@ -34,7 +34,7 @@ const questions = [
   {
     question: '3. La Piedra del Penol se encuentra cerca de que municipio?',
     image:
-      'https://images.unsplash.com/photo-1590561311289-6c2fda8c40c3?auto=format&fit=crop&w=1200&q=80',
+      'https://www.viajesyfotografia.com/wp-content/uploads/2018/02/guatape-13h31m28s136.jpg',
     imageAlt: 'La Piedra del Penol y el embalse alrededor',
     options: ['Jardin', 'Santa Elena', 'Guatape', 'Sabaneta'],
     correctIndex: 2,
@@ -44,7 +44,7 @@ const questions = [
   {
     question: '4. En que lugar esta el tradicional Pueblito Paisa?',
     image:
-      'https://images.unsplash.com/photo-1624036234963-8d0c6b6cd5b7?auto=format&fit=crop&w=1200&q=80',
+      'https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2022/04/06/624db3d2d6035.jpeg',
     imageAlt: 'Vista del Pueblito Paisa en el cerro',
     options: ['Parque Arvi', 'Cerro El Volador', 'Envigado', 'Cerro Nutibara'],
     correctIndex: 3,
@@ -54,7 +54,7 @@ const questions = [
   {
     question: '5. Cual es la feria mas emblematicamente floral de Medellin?',
     image:
-      'https://images.unsplash.com/photo-1531700575431-8b9f9d4d4ed3?auto=format&fit=crop&w=1200&q=80',
+      'https://colombia.travel/sites/default/files/inline-images/FFDS021%20Cortes%C3%ADa%20Bureau%20de%20Medell%C3%ADn%2C%20Medell%C3%ADn_opt_opt.jpg',
     imageAlt: 'Flores y ambiente festivo de la feria',
     options: ['Feria de la Cosecha', 'Fiesta del Sol', 'Feria de las Flores', 'Carnaval Paisa'],
     correctIndex: 2,
@@ -64,7 +64,7 @@ const questions = [
   {
     question: '6. Santa Fe de Antioquia es famosa, entre otras cosas, por:',
     image:
-      'https://images.unsplash.com/photo-1596392927858-0b3d8d30c78a?auto=format&fit=crop&w=1200&q=80',
+      'https://realcitytours.com/wp-content/uploads/2024/09/Santa-Fe-de-Antioquia-scaled-1.jpg',
     imageAlt: 'Puente historico en Santa Fe de Antioquia',
     options: [
       'El Puente de Occidente',
@@ -79,7 +79,7 @@ const questions = [
   {
     question: '7. Que corregimiento de Medellin es conocido por sus flores y fincas?',
     image:
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+      'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/15/6f/ec/33.jpg',
     imageAlt: 'Paisaje rural con flores y montanas',
     options: ['San Cristobal', 'Palmitas', 'Altavista', 'Santa Elena'],
     correctIndex: 3,
@@ -89,7 +89,7 @@ const questions = [
   {
     question: '8. En que zona estan las escaleras electricas al aire libre mas famosas?',
     image:
-      'https://images.unsplash.com/photo-1708633623355-89f8f2ec6a92?auto=format&fit=crop&w=1200&q=80',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/6c/a5/ef/ven-y-dejate-contar-la.jpg?w=900&h=500&s=1',
     imageAlt: 'Escaleras electricas y murales coloridos en Comuna 13',
     options: ['Laureles', 'Comuna 13', 'Belen', 'El Poblado'],
     correctIndex: 1,
@@ -99,7 +99,7 @@ const questions = [
   {
     question: '9. El Parque Arvi puede visitarse facilmente usando:',
     image:
-      'https://images.unsplash.com/photo-1610041321327-b79454853cda?auto=format&fit=crop&w=1200&q=80',
+      'https://www.semana.com/resizer/v2/4V3JJQKWYJGTRADFWGPYHPOCH4.jpg?auth=f8c98116caab4e67f0b9338751b204ff0c4502498792e047108dbe91cde7de24&smart=true&quality=75&width=1920&height=1080',
     imageAlt: 'Teleferico avanzando hacia una zona montañosa',
     options: ['Un ferry', 'Un monorriel', 'El Metrocable', 'Un tranvia maritimo'],
     correctIndex: 2,
@@ -109,7 +109,7 @@ const questions = [
   {
     question: '10. Cual de estos platos es un clasico antioqueno?',
     image:
-      'https://images.unsplash.com/photo-1604908176997-4f28f72b4f42?auto=format&fit=crop&w=1200&q=80',
+      'https://recetasdecocina.elmundo.es/wp-content/uploads/2025/05/bandeja-paisa-1024x683.jpg',
     imageAlt: 'Mesa con comida tradicional colombiana',
     options: ['Ajiaco santafereno', 'Bandeja paisa', 'Lechona tolimense', 'Changua'],
     correctIndex: 1,
@@ -340,12 +340,12 @@ function App() {
                             {isCorrect ? (
                               <>
                                 <CheckCircle2 size={20} />
-                                Muy bien, Elizabeth
+                                Muy bien mami
                               </>
                             ) : (
                               <>
                                 <XCircle size={20} />
-                                Casi, mi amor
+                                Casi, jaja
                               </>
                             )}
                           </p>
