@@ -13,6 +13,9 @@ import {
 const questions = [
   {
     question: '1. Como se llama el sistema de telefericos urbano de Medellin?',
+    image:
+      'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Cabinas del teleferico sobre Medellin',
     options: ['Metrocable', 'Metroplus', 'Tranvia Verde', 'Aero Metro'],
     correctIndex: 0,
     explanation:
@@ -20,6 +23,9 @@ const questions = [
   },
   {
     question: '2. En que plaza se encuentran las famosas esculturas de Fernando Botero?',
+    image:
+      'https://images.unsplash.com/photo-1624838821716-9a60e8d25754?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Esculturas y plaza en el centro de Medellin',
     options: ['Parque Berrio', 'Parque de los Deseos', 'Plaza Botero', 'Plaza Mayor'],
     correctIndex: 2,
     explanation:
@@ -27,6 +33,9 @@ const questions = [
   },
   {
     question: '3. La Piedra del Penol se encuentra cerca de que municipio?',
+    image:
+      'https://images.unsplash.com/photo-1590561311289-6c2fda8c40c3?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'La Piedra del Penol y el embalse alrededor',
     options: ['Jardin', 'Santa Elena', 'Guatape', 'Sabaneta'],
     correctIndex: 2,
     explanation:
@@ -34,6 +43,9 @@ const questions = [
   },
   {
     question: '4. En que lugar esta el tradicional Pueblito Paisa?',
+    image:
+      'https://images.unsplash.com/photo-1624036234963-8d0c6b6cd5b7?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Vista del Pueblito Paisa en el cerro',
     options: ['Parque Arvi', 'Cerro El Volador', 'Envigado', 'Cerro Nutibara'],
     correctIndex: 3,
     explanation:
@@ -41,6 +53,9 @@ const questions = [
   },
   {
     question: '5. Cual es la feria mas emblematicamente floral de Medellin?',
+    image:
+      'https://images.unsplash.com/photo-1531700575431-8b9f9d4d4ed3?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Flores y ambiente festivo de la feria',
     options: ['Feria de la Cosecha', 'Fiesta del Sol', 'Feria de las Flores', 'Carnaval Paisa'],
     correctIndex: 2,
     explanation:
@@ -48,6 +63,9 @@ const questions = [
   },
   {
     question: '6. Santa Fe de Antioquia es famosa, entre otras cosas, por:',
+    image:
+      'https://images.unsplash.com/photo-1596392927858-0b3d8d30c78a?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Puente historico en Santa Fe de Antioquia',
     options: [
       'El Puente de Occidente',
       'Las escaleras electricas',
@@ -60,6 +78,9 @@ const questions = [
   },
   {
     question: '7. Que corregimiento de Medellin es conocido por sus flores y fincas?',
+    image:
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Paisaje rural con flores y montanas',
     options: ['San Cristobal', 'Palmitas', 'Altavista', 'Santa Elena'],
     correctIndex: 3,
     explanation:
@@ -67,6 +88,9 @@ const questions = [
   },
   {
     question: '8. En que zona estan las escaleras electricas al aire libre mas famosas?',
+    image:
+      'https://images.unsplash.com/photo-1708633623355-89f8f2ec6a92?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Escaleras electricas y murales coloridos en Comuna 13',
     options: ['Laureles', 'Comuna 13', 'Belen', 'El Poblado'],
     correctIndex: 1,
     explanation:
@@ -74,6 +98,9 @@ const questions = [
   },
   {
     question: '9. El Parque Arvi puede visitarse facilmente usando:',
+    image:
+      'https://images.unsplash.com/photo-1610041321327-b79454853cda?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Teleferico avanzando hacia una zona montañosa',
     options: ['Un ferry', 'Un monorriel', 'El Metrocable', 'Un tranvia maritimo'],
     correctIndex: 2,
     explanation:
@@ -81,6 +108,9 @@ const questions = [
   },
   {
     question: '10. Cual de estos platos es un clasico antioqueno?',
+    image:
+      'https://images.unsplash.com/photo-1604908176997-4f28f72b4f42?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Mesa con comida tradicional colombiana',
     options: ['Ajiaco santafereno', 'Bandeja paisa', 'Lechona tolimense', 'Changua'],
     correctIndex: 1,
     explanation:
@@ -102,15 +132,15 @@ function App() {
 
   const scoreMessage = useMemo(() => {
     if (score >= 9) {
-      return 'Eres una experta total. Medellin ya te espera con aplausos.'
+      return 'Eres un amor de persona y una experta total. Medellin ya te espera con abrazo incluido.'
     }
     if (score >= 7) {
-      return 'Lo hiciste increible. Tienes muy buen ojo viajero.'
+      return 'Lo hiciste increíble. Tienes un corazón curioso y un encanto viajero precioso.'
     }
     if (score >= 5) {
-      return 'Muy bien. Ya tienes una excelente base para disfrutar el viaje.'
+      return 'Muy bien. Ya tienes una base hermosa para disfrutar el viaje y sonreir mucho.'
     }
-    return 'Cada respuesta fue una pista bonita del destino. Lo importante: vas a viajar.'
+    return 'Cada respuesta fue una pista bonita. Lo mas importante es que este viaje ya esta lleno de cariño.'
   }, [score])
 
   const startQuiz = () => {
@@ -218,25 +248,6 @@ function App() {
               exit={{ opacity: 0, y: -24 }}
               transition={{ duration: 0.4 }}
             >
-              <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-                <p className="inline-flex items-center gap-2 rounded-full bg-[#fff4ed] px-4 py-2 text-sm font-bold text-[#ad5939]">
-                  <MapPinned size={16} />
-                  Pregunta {currentQuestion + 1} de {questions.length}
-                </p>
-                <p className="text-sm font-bold text-[#87523f]">
-                  Progreso: {progress}%
-                </p>
-              </div>
-
-              <div className="mb-8 h-3 w-full overflow-hidden rounded-full bg-[#ffe2d2]">
-                <motion.div
-                  className="h-full bg-[#ff8d61]"
-                  initial={{ width: 0 }}
-                  animate={{ width: `${progress}%` }}
-                  transition={{ duration: 0.5 }}
-                />
-              </div>
-
               <AnimatePresence mode="wait">
                 <motion.div
                   key={question.question}
@@ -244,90 +255,123 @@ function App() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -25 }}
                   transition={{ duration: 0.35 }}
-                  className="space-y-6"
+                  className="overflow-hidden rounded-[2rem] border border-[#f5d0bf] bg-white/85 shadow-[0_20px_60px_-35px_rgba(138,73,45,0.45)]"
                 >
-                  <h2 className="font-display text-3xl leading-tight text-[#4f2f21]">
-                    {question.question}
-                  </h2>
-
-                  <div className="grid gap-3">
-                    {question.options.map((option, optionIndex) => {
-                      const optionIsCorrect = optionIndex === question.correctIndex
-                      const optionIsSelected = optionIndex === selectedOption
-
-                      let optionClass =
-                        'border-[#f2cbb7] bg-white hover:border-[#ff9c74] hover:bg-[#fff7f3]'
-
-                      if (hasAnswered && optionIsSelected && isCorrect) {
-                        optionClass = 'border-[#5fb47a] bg-[#ebf9f0] text-[#215532]'
-                      }
-
-                      if (hasAnswered && optionIsSelected && !isCorrect) {
-                        optionClass = 'border-[#d96666] bg-[#ffeef0] text-[#6b2424]'
-                      }
-
-                      if (hasAnswered && optionIsCorrect && !isCorrect) {
-                        optionClass = 'border-[#5fb47a] bg-[#ebf9f0] text-[#215532]'
-                      }
-
-                      return (
-                        <button
-                          type="button"
-                          key={option}
-                          onClick={() => selectAnswer(optionIndex)}
-                          className={`w-full rounded-2xl border px-5 py-4 text-left text-lg font-semibold transition ${optionClass}`}
-                          disabled={hasAnswered}
-                        >
-                          {option}
-                        </button>
-                      )
-                    })}
-                  </div>
-
-                  {hasAnswered && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className={`rounded-3xl border p-5 ${
-                        isCorrect
-                          ? 'border-[#8fd3a5] bg-[#effcf3] text-[#255236]'
-                          : 'border-[#f2a6a6] bg-[#fff1f3] text-[#6b2b2b]'
-                      }`}
-                    >
-                      <p className="mb-2 inline-flex items-center gap-2 text-lg font-extrabold">
-                        {isCorrect ? (
-                          <>
-                            <CheckCircle2 size={20} />
-                            Excelente, respuesta correcta
-                          </>
-                        ) : (
-                          <>
-                            <XCircle size={20} />
-                            Casi, pero no era esa
-                          </>
-                        )}
-                      </p>
-
-                      {!isCorrect && (
-                        <p className="mb-2 font-bold">
-                          Respuesta correcta: {question.options[question.correctIndex]}
+                  <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
+                    <div className="relative min-h-[240px] lg:min-h-full">
+                      <img
+                        src={question.image}
+                        alt={question.imageAlt}
+                        className="h-full w-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#45261d]/60 via-[#45261d]/10 to-transparent" />
+                      <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.24em] text-[#8b4a31] shadow-sm">
+                        <MapPinned size={14} />
+                        Momento {currentQuestion + 1}
+                      </div>
+                      <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/88 p-4 backdrop-blur-md">
+                        <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#9d614b]">
+                          Pregunta {currentQuestion + 1} de {questions.length}
                         </p>
+                        <div className="mt-3 h-2 overflow-hidden rounded-full bg-[#ffe1d0]">
+                          <motion.div
+                            className="h-full rounded-full bg-[#ff8d61]"
+                            initial={{ width: 0 }}
+                            animate={{ width: `${progress}%` }}
+                            transition={{ duration: 0.5 }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-5 p-5 sm:p-7">
+                      <h2 className="font-display text-3xl leading-tight text-[#4f2f21] sm:text-[2.15rem]">
+                        {question.question}
+                      </h2>
+
+                      <div className="grid gap-3 sm:grid-cols-2">
+                        {question.options.map((option, optionIndex) => {
+                          const optionIsCorrect = optionIndex === question.correctIndex
+                          const optionIsSelected = optionIndex === selectedOption
+
+                          let optionClass =
+                            'border-[#f2cbb7] bg-white/95 hover:border-[#ff9c74] hover:bg-[#fff7f3]'
+
+                          if (hasAnswered && optionIsSelected && isCorrect) {
+                            optionClass = 'border-[#5fb47a] bg-[#ebf9f0] text-[#215532]'
+                          }
+
+                          if (hasAnswered && optionIsSelected && !isCorrect) {
+                            optionClass = 'border-[#d96666] bg-[#ffeef0] text-[#6b2424]'
+                          }
+
+                          if (hasAnswered && optionIsCorrect && !isCorrect) {
+                            optionClass = 'border-[#5fb47a] bg-[#ebf9f0] text-[#215532]'
+                          }
+
+                          return (
+                            <button
+                              type="button"
+                              key={option}
+                              onClick={() => selectAnswer(optionIndex)}
+                              className={`min-h-[74px] w-full rounded-[1.35rem] border px-4 py-4 text-left text-base font-semibold leading-snug transition sm:text-[1.05rem] ${optionClass}`}
+                              disabled={hasAnswered}
+                            >
+                              <span className="block text-sm font-extrabold uppercase tracking-[0.18em] text-[#b87456]">
+                                Opcion {String.fromCharCode(65 + optionIndex)}
+                              </span>
+                              <span className="mt-1 block">{option}</span>
+                            </button>
+                          )
+                        })}
+                      </div>
+
+                      {hasAnswered && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className={`rounded-[1.5rem] border p-5 ${
+                            isCorrect
+                              ? 'border-[#8fd3a5] bg-[#effcf3] text-[#255236]'
+                              : 'border-[#f2a6a6] bg-[#fff1f3] text-[#6b2b2b]'
+                          }`}
+                        >
+                          <p className="mb-2 inline-flex items-center gap-2 text-lg font-extrabold">
+                            {isCorrect ? (
+                              <>
+                                <CheckCircle2 size={20} />
+                                Muy bien, Elizabeth
+                              </>
+                            ) : (
+                              <>
+                                <XCircle size={20} />
+                                Casi, mi amor
+                              </>
+                            )}
+                          </p>
+
+                          {!isCorrect && (
+                            <p className="mb-2 font-bold">
+                              Respuesta correcta: {question.options[question.correctIndex]}
+                            </p>
+                          )}
+
+                          <p className="leading-relaxed">{question.explanation}</p>
+                        </motion.div>
                       )}
 
-                      <p className="leading-relaxed">{question.explanation}</p>
-                    </motion.div>
-                  )}
-
-                  <button
-                    type="button"
-                    onClick={nextQuestion}
-                    disabled={!hasAnswered}
-                    className="rounded-full bg-[#ff8a5c] px-6 py-3 text-base font-extrabold text-white transition hover:bg-[#f27545] disabled:cursor-not-allowed disabled:bg-[#ffc2ab]"
-                  >
-                    {currentQuestion < questions.length - 1
-                      ? 'Siguiente pregunta'
-                      : 'Ver premio final'}
-                  </button>
+                      <button
+                        type="button"
+                        onClick={nextQuestion}
+                        disabled={!hasAnswered}
+                        className="w-full rounded-full bg-[#ff8a5c] px-6 py-3 text-base font-extrabold text-white transition hover:bg-[#f27545] disabled:cursor-not-allowed disabled:bg-[#ffc2ab]"
+                      >
+                        {currentQuestion < questions.length - 1
+                          ? 'Siguiente pregunta'
+                          : 'Ver premio final'}
+                      </button>
+                    </div>
+                  </div>
                 </motion.div>
               </AnimatePresence>
             </motion.div>
@@ -361,11 +405,12 @@ function App() {
                   Sorpresa para Elizabeth
                 </p>
                 <p className="text-3xl font-black text-[#6c3f2b] sm:text-4xl">
-                  Te vas de viaje a Medellin
+                  Te espera un viaje hecho con mucho amor
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-[#7a5847] sm:text-lg">
-                  Porque mereces celebrar bonito, descansar y vivir nuevas
-                  experiencias. Este viaje es nuestro abrazo en forma de aventura.
+                  Porque mereces celebrar bonito, descansar y sentirte muy querida.
+                  Este detalle es un abrazo largo, una sonrisa tranquila y una aventura
+                  pensada solo para ti.
                 </p>
               </div>
 
