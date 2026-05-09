@@ -437,9 +437,6 @@ function App() {
                 </div>
 
                 <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
-                  <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/85 px-4 py-2 text-sm font-extrabold uppercase tracking-[0.22em] text-[#9d614b]">
-                    Para Elizabeth, con amor
-                  </p>
                   <p className="mb-3 inline-flex items-center gap-2 text-xl font-black text-[#ae582f]">
                     <Gift size={24} />
                     Sorpresa para Elizabeth
