@@ -447,10 +447,16 @@ function App() {
                   <p className="text-3xl font-black text-[#6c3f2b] sm:text-4xl">
                     Te espera un viaje hecho con mucho amor 💖
                   </p>
+
                   <p className="mt-4 text-base leading-relaxed text-[#7a5847] sm:text-lg">
                     Porque mereces celebrar bonito, descansar y sentirte muy querida.
                     Este detalle es un abrazo largo, una sonrisa tranquila y una aventura
                     pensada solo para ti.
+                  </p>
+
+                  <p className="mt-5 inline-block rounded-lg bg-[#fff4ed] px-4 py-3 text-lg font-extrabold text-[#9b4a2f] shadow-sm">
+                    Te has ganado un increible Tour a Medellín con visita a la Piedra del Peñol
+                    y un día mágico en Guatapé. Te espera una gran aventura!
                   </p>
                 </div>
               </div>
