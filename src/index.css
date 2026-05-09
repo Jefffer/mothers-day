@@ -59,3 +59,69 @@ body {
   background: #ffd7c5;
   color: #613828;
 }
+
+/* Button sparkle & beam animations */
+.btn-sparkle {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow {
+  box-shadow: 0 8px 30px -18px rgba(240,111,67,0.95), 0 6px 18px -8px rgba(255,140,92,0.45);
+}
+
+@keyframes beamMove {
+  0% {
+    transform: translateX(-120%) rotate(14deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.85;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateX(120%) rotate(14deg);
+    opacity: 0;
+  }
+}
+
+.btn-beam {
+  position: absolute;
+  left: -10%;
+  width: 140%;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.9) 45%, rgba(255,255,255,0.0) 100%);
+  filter: blur(6px);
+  transform: rotate(14deg);
+  pointer-events: none;
+  opacity: 0;
+  mix-blend-mode: screen;
+  border-radius: 999px;
+}
+
+.btn-beam.beam-1 { top: 18%; animation: beamMove 2.2s linear infinite; }
+.btn-beam.beam-2 { top: 48%; animation: beamMove 2.8s linear infinite; animation-delay: 0.4s; height:3px; filter: blur(4px); }
+.btn-beam.beam-3 { top: 72%; animation: beamMove 3.2s linear infinite; animation-delay: 0.9s; height:2px; filter: blur(2px); }
+
+@keyframes sparklePop {
+  0% { transform: translateY(6px) scale(0.6); opacity: 0 }
+  30% { transform: translateY(0) scale(1); opacity: 1 }
+  70% { opacity: 1 }
+  100% { transform: translateY(-6px) scale(0.8); opacity: 0 }
+}
+
+.btn-sparkle-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle at 30% 30%, #fff, #ffd7c5);
+  border-radius: 999px;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.dot-1 { right: 12%; top: 14%; animation: sparklePop 2.6s infinite; animation-delay: 0.1s; }
+.dot-2 { left: 18%; top: 60%; animation: sparklePop 2.2s infinite; animation-delay: 0.5s; width:6px; height:6px }
+.dot-3 { right: 6%; bottom: 12%; animation: sparklePop 3s infinite; animation-delay: 0.9s; width:5px; height:5px }

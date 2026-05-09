@@ -220,14 +220,27 @@ function App() {
                     celebrar una de tus grandes pasiones.
                   </p>
 
-                  <button
+                  <motion.button
                     type="button"
                     onClick={startQuiz}
-                    className="mt-8 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-[#ff8a5c] via-[#ff9c73] to-[#f06f43] px-8 py-4 text-lg font-extrabold text-white shadow-[0_14px_32px_-18px_rgba(240,111,67,0.95)] ring-1 ring-white/35 transition hover:-translate-y-0.5 hover:shadow-[0_18px_38px_-18px_rgba(240,111,67,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff8a5c]"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    initial={{ y: 0 }}
+                    animate={{ y: [0, -3, 0] }}
+                    transition={{ duration: 2.5, repeat: Infinity }}
+                    className="mt-8 relative inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-[#ff8a5c] via-[#ff9c73] to-[#f06f43] px-8 py-4 text-lg font-extrabold text-white shadow-[0_14px_32px_-18px_rgba(240,111,67,0.95)] ring-1 ring-white/35 transition btn-sparkle btn-glow overflow-hidden"
                   >
-                    <Sparkles size={20} />
-                    Empezar reto
-                  </button>
+                    <span className="btn-beam beam-1" aria-hidden />
+                    <span className="btn-beam beam-2" aria-hidden />
+                    <span className="btn-beam beam-3" aria-hidden />
+
+                    <Sparkles size={18} />
+                    <span className="relative">Empezar reto</span>
+
+                    <span className="btn-sparkle-dot dot-1" aria-hidden />
+                    <span className="btn-sparkle-dot dot-2" aria-hidden />
+                    <span className="btn-sparkle-dot dot-3" aria-hidden />
+                  </motion.button>
                 </div>
 
                 <motion.div
@@ -291,7 +304,7 @@ function App() {
                       <div className="space-y-3">
                         <p className="inline-flex items-center gap-2 rounded-full bg-[#fff4ed] px-4 py-2 text-xs font-extrabold uppercase tracking-[0.22em] text-[#ad5939]">
                           <CircleHelp size={14} />
-                          Cuestionario de Elizabeth
+                          Cuestionario para Elizabeth
                         </p>
 
                         <h2 className="font-display text-3xl leading-tight text-[#4f2f21] sm:text-[2.15rem]">
