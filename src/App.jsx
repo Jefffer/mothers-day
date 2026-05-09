@@ -23,7 +23,7 @@ const questions = [
     options: ['Parque Berrio', 'Parque de los Deseos', 'Plaza Botero', 'Plaza Mayor'],
     correctIndex: 2,
     explanation:
-      'La Plaza Botero exhibe esculturas monumentales del artista antioqueno y es un punto turistico clave.',
+      'La Plaza Botero exhibe esculturas monumentales del artista antioqueño y es un punto turistico clave.',
   },
   {
     question: '3. La Piedra del Penol se encuentra cerca de que municipio?',
@@ -37,7 +37,7 @@ const questions = [
     options: ['Parque Arvi', 'Cerro El Volador', 'Envigado', 'Cerro Nutibara'],
     correctIndex: 3,
     explanation:
-      'El Pueblito Paisa se ubica en el Cerro Nutibara y representa una plaza tipica antioquena.',
+      'El Pueblito Paisa se ubica en el Cerro Nutibara y representa una plaza tipica antioqueña.',
   },
   {
     question: '5. Cual es la feria mas emblematicamente floral de Medellin?',
@@ -110,7 +110,7 @@ function App() {
     if (score >= 5) {
       return 'Muy bien. Ya tienes una excelente base para disfrutar el viaje.'
     }
-    return 'Cada respuesta fue una pista bonita del destino. Lo importante: vamos a viajar.'
+    return 'Cada respuesta fue una pista bonita del destino. Lo importante: vas a viajar.'
   }, [score])
 
   const startQuiz = () => {
@@ -179,9 +179,8 @@ function App() {
                   </h1>
 
                   <p className="mt-4 max-w-xl text-lg leading-relaxed text-[#6c4b3d]">
-                    Este detalle fue hecho con amor por tus hijos. Debes
+                    Hecho con amor por Andrés, John y Jeffer. Debes
                     completar un cuestionario para ganarte un premio sorpresa.
-                    El premio sera el mismo; solo cambiara el mensaje final.
                   </p>
 
                   <button
@@ -206,9 +205,6 @@ function App() {
                     alt="Elizabeth"
                     className="h-[410px] w-full rounded-[1.8rem] object-cover shadow-lg"
                   />
-                  <p className="absolute -bottom-4 right-4 rounded-2xl bg-white/90 px-4 py-2 text-sm font-bold text-[#6d4a3a] shadow">
-                    Tu foto va aqui
-                  </p>
                 </motion.div>
               </div>
             </motion.div>
@@ -356,7 +352,7 @@ function App() {
               </h2>
 
               <p className="mx-auto max-w-2xl text-lg leading-relaxed text-[#6f4f41]">
-                {scoreMessage} El premio es el mismo para ambos resultados.
+                {scoreMessage}
               </p>
 
               <div className="mx-auto mt-3 max-w-2xl rounded-[2rem] border border-[#f8d6b7] bg-gradient-to-br from-[#fff9f0] to-[#ffe9d8] p-8 shadow-[0_20px_50px_-35px_rgba(170,89,45,0.5)]">
@@ -365,7 +361,7 @@ function App() {
                   Sorpresa para Elizabeth
                 </p>
                 <p className="text-3xl font-black text-[#6c3f2b] sm:text-4xl">
-                  Nos vamos de viaje a Medellin
+                  Te vas de viaje a Medellin
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-[#7a5847] sm:text-lg">
                   Porque mereces celebrar bonito, descansar y vivir nuevas
