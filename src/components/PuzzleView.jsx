@@ -160,7 +160,7 @@ function PuzzleView({ imageSrc, onPuzzleComplete }) {
             ref={gridRef}
             onDragOver={handleGridDragOver}
             onDrop={handleGridDrop}
-            className="relative mx-auto grid w-full max-w-[640px] grid-cols-4 gap-1 rounded-2xl border-3 border-dashed border-[#f2b89f] bg-gradient-to-br from-[#fef8f3] to-[#fff0ea] p-3 shadow-inner sm:gap-2 sm:p-4"
+            className="relative mx-auto grid w-full max-w-[640px] grid-cols-4 gap-1 rounded-2xl border-3 border-dashed border-[#f2b89f] bg-gradient-to-br from-[#fef8f3] to-[#fff0ea] p-3 shadow-inner"
             initial={{ scale: 0.95 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.4 }}
