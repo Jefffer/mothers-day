@@ -97,7 +97,7 @@ const questions = [
       'En la Comuna 13 las escaleras eléctricas se volvieron símbolo de transformación social y turismo.',
   },
   {
-    question: '9. ¿El Parque Arví puede visitarse fácilmente usando el Metrocable?',
+    question: '9. ¿Cual es el transporte más común para visitar el Parque Arví?',
     image:
       'https://www.semana.com/resizer/v2/4V3JJQKWYJGTRADFWGPYHPOCH4.jpg?auth=f8c98116caab4e67f0b9338751b204ff0c4502498792e047108dbe91cde7de24&smart=true&quality=75&width=1920&height=1080',
     imageAlt: 'Teleférico avanzando hacia una zona montañosa',
@@ -304,7 +304,7 @@ function App() {
                       <div className="space-y-3">
                         <p className="inline-flex items-center gap-2 rounded-full bg-[#fff4ed] px-4 py-2 text-xs font-extrabold uppercase tracking-[0.22em] text-[#ad5939]">
                           <CircleHelp size={14} />
-                          Cuestionario para Elizabeth
+                          Cuestionario para la mamita más linda
                         </p>
 
                         <h2 className="font-display text-3xl leading-tight text-[#4f2f21] sm:text-[2.15rem]">
@@ -363,12 +363,12 @@ function App() {
                             {isCorrect ? (
                               <>
                                 <CheckCircle2 size={20} />
-                                Muy bien, mami
+                                Muy bien mami! 🥰
                               </>
                             ) : (
                               <>
                                 <XCircle size={20} />
-                                Casi, jajá
+                                ¡Casi! 🙈
                               </>
                             )}
                           </p>
@@ -425,7 +425,7 @@ function App() {
               <div className="mx-auto mt-3 grid max-w-4xl gap-0 overflow-hidden rounded-[2rem] border border-[#f8d6b7] bg-gradient-to-br from-[#fff9f0] to-[#ffe9d8] shadow-[0_20px_50px_-35px_rgba(170,89,45,0.5)] lg:grid-cols-[0.96fr_1.04fr] lg:text-left">
                 <div className="relative flex h-full min-h-[320px] items-center justify-center bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.55),_rgba(255,244,228,0.92))] p-4 sm:min-h-[420px] lg:min-h-[560px]">
                   <img
-                    src="/3.png"
+                    src="/5.png"
                     alt="Elizabeth celebrando su premio"
                     className="h-full w-full rounded-[1.5rem] object-contain shadow-[0_18px_40px_-30px_rgba(0,0,0,0.45)]"
                   />
@@ -439,7 +439,7 @@ function App() {
                 <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
                   <p className="mb-3 inline-flex items-center gap-2 text-xl font-black text-[#ae582f]">
                     <Gift size={24} />
-                    Sorpresa para Elizabeth
+                    Sorpresa para la mamita más linda
                   </p>
                   <p className="text-3xl font-black text-[#6c3f2b] sm:text-4xl">
                     Te espera un viaje hecho con mucho amor 💖
