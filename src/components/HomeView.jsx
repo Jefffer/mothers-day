@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Heart, Sparkles } from 'lucide-react'
 
-function HomeView({ onStartQuiz }) {
+function HomeView({ onStartQuiz, onEasterEgg }) {
   return (
     <motion.div
       key="home"
@@ -18,8 +18,11 @@ function HomeView({ onStartQuiz }) {
             Para Elizabeth, con todo nuestro amor
           </p>
 
-          <h1 className="font-display text-4xl leading-tight text-[#4d2d1f] sm:text-5xl">
-            Feliz Día de la Madre
+          <h1 className="font-display text-4xl leading-tight text-[#4d2d1f] sm:text-5xl cursor-default select-none">
+            <span onDoubleClick={onEasterEgg}>
+              Feliz
+            </span>
+            {' '}Día de la Madre
           </h1>
 
           <p className="mt-4 text-sm italic text-[#a65a48]">

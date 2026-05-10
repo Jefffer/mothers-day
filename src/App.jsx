@@ -2,6 +2,7 @@
 import { AnimatePresence } from 'framer-motion'
 import HomeView from './components/HomeView'
 import QuizView from './components/QuizView'
+import PuzzleView from './components/PuzzleView'
 import ResultView from './components/ResultView'
 import { questions } from './data/questions'
 
@@ -59,7 +60,21 @@ function App() {
       return
     }
 
+    setView('puzzle')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const completePuzzle = () => {
     setView('result')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const jumpToQuestion10 = () => {
+    // Set state to jump to question 10 (index 9)
+    setCurrentQuestion(9)
+    setAnswers(Array(9).fill(-1)) // Mark first 9 questions as unanswered
+    setScore(0)
+    setView('quiz')
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -79,7 +94,7 @@ function App() {
 
       <section className="relative mx-auto w-full max-w-5xl rounded-[2rem] border border-[#ffffffa6] bg-white/75 p-5 shadow-[0_20px_80px_-30px_rgba(140,58,38,0.35)] backdrop-blur-md sm:p-10">
         <AnimatePresence mode="wait">
-          {view === 'home' && <HomeView onStartQuiz={startQuiz} />}
+          {view === 'home' && <HomeView onStartQuiz={startQuiz} onEasterEgg={jumpToQuestion10} />}
 
           {view === 'quiz' && (
             <QuizView
@@ -93,6 +108,10 @@ function App() {
               onSelectAnswer={selectAnswer}
               onNextQuestion={nextQuestion}
             />
+          )}
+
+          {view === 'puzzle' && (
+            <PuzzleView imageSrc="/4.png" onPuzzleComplete={completePuzzle} />
           )}
 
           {view === 'result' && (
